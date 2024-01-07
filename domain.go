@@ -1,4 +1,4 @@
-package ghostmodeguard
+package hiding
 
 // ComputedHidingRisk is the user hiding risk score
 type ComputedHidingRisk struct {

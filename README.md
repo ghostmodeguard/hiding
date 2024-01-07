@@ -28,7 +28,7 @@ Store it on your application, then create an OAEPReader instance
 
 ```go
 privateKey := "your_private_key_here"
-reader, err := ghostmodeguard.NewOAEPReader(privateKey)
+reader, err := hiding.NewOAEPReader(privateKey)
 if err != nil {
 // Handle error
 }
@@ -63,7 +63,7 @@ import (
 
 func main() {
     privateKey := "your_private_key_here"
-    reader, err := ghostmodeguard.NewOAEPReader(privateKey)
+    reader, err := hiding.NewOAEPReader(privateKey)
     if err != nil {
         // Handle error
     }

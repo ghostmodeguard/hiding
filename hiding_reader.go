@@ -1,4 +1,4 @@
-package ghostmodeguard
+package hiding
 
 import (
 	"crypto/rsa"

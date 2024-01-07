@@ -1,4 +1,4 @@
-package ghostmodeguard
+package hiding
 
 var _ Reader = &ReaderSpy{}
 
