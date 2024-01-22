@@ -2,7 +2,7 @@
 
 ## Overview
 
-The GhostModeGuard package provides functionality for reading computed hiding risk messages. It employs asymmetric cryptography, specifically RSA, for secure message handling.
+The GhostModeGuard package provides functionality for reading computed hiding risk messages. It employs asymmetric cryptography, specifically AES, for secure message handling.
 
 ## Installation
 
@@ -24,17 +24,17 @@ curl -X 'POST' \
 -H 'accept: application/json'
 ```
 
-Store it on your application, then create an OAEPReader instance
+Store it on your application, then create an AESReader instance
 
 ```go
-privateKey := "your_private_key_here"
-reader, err := hiding.NewOAEPReader(privateKey)
+aesKey := "your_aes_key_fetched_from_ghost_mode_guard"
+reader, err := hiding.NewAESReader(aesKey)
 if err != nil {
 // Handle error
 }
 ```
 
-The NewOAEPReader function takes a private key as a string and returns an instance of the Reader interface, which allows you to read computed hiding risk messages.
+The NewAESReader function takes a series of 32 characters as a string and returns an instance of the Reader interface, which allows you to read computed hiding risk messages.
 
 Read a Computed Hiding Risk Message
 
@@ -62,8 +62,8 @@ import (
 )
 
 func main() {
-    privateKey := "your_private_key_here"
-    reader, err := hiding.NewOAEPReader(privateKey)
+    privateKey := "your_aes_key_fetched_from_ghost_mode_guard"
+    reader, err := hiding.NewAESReader(privateKey)
     if err != nil {
         // Handle error
     }
@@ -81,7 +81,7 @@ func main() {
 
 ## Important Notes
 
-- Ensure that you handle errors appropriately, especially during the creation of the OAEPReader instance and when reading the computed hiding risk message.
+- Ensure that you handle errors appropriately, especially during the creation of the AESReader instance and when reading the computed hiding risk message.
 - The private key should be kept confidential and not shared publicly.
 
 ## License
