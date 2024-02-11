@@ -21,7 +21,7 @@ func TestHidingReader(t *testing.T) {
 		require.NotNil(t, actualRisk)
 		assert.Equal(t, ComputedHidingRisk{
 			Token:                  "tok",
-			Verdict:                HidingVerdictOK,
+			Verdict:                VerdictOK,
 			DenyScore:              1,
 			VirtualMachineScore:    2,
 			AntiTrackerScore:       3,
