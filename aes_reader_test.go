@@ -14,13 +14,14 @@ func TestHidingReader(t *testing.T) {
 
 	t.Run("nominal", func(t *testing.T) {
 		// Act
-		actualRisk, err := reader.Read("RdeIDzoKZr+zvbgfgxodfQRo06+4ITGlREMuBZGA1GCkT8zbdy+CBxPH5zgdRAepe7ETdxf3TY+P53qq3KN8XxfQMSYCp4ZFtIYfRQyfuE2I8gLNWN4hMeFppQ==")
+		actualRisk, err := reader.Read("ysj4Kkl4GfK2BuBS4vYy8PpiAt0eBtkihOe6fOtYmNUNUH7PSnxWAuqaIKGjfNamUtCJUH5ji5NkEx0ITlJbDlFGNpkxNIfo8DLvO2pEOWPJDRF9vnXO3X5TeG35")
 
 		// Verify
 		require.NoError(t, err)
 		require.NotNil(t, actualRisk)
 		assert.Equal(t, ComputedHidingRisk{
 			Token:                  "tok",
+			Verdict:                HidingVerdictOK,
 			DenyScore:              1,
 			VirtualMachineScore:    2,
 			AntiTrackerScore:       3,
