@@ -14,7 +14,7 @@ func TestHidingReader(t *testing.T) {
 
 	t.Run("nominal", func(t *testing.T) {
 		// Act
-		actualRisk, err := reader.Read("mPR1YoJ1/TtSN9Mvq0az5yigrZtxPr8WSgho7Pj5bQv+aA7zyAaAScP/BdXZ6H4EbVr43mmYd74tIPedT9qR87RaYl1wSUnby3cdDtc=")
+		actualRisk, err := reader.Read("RdeIDzoKZr+zvbgfgxodfQRo06+4ITGlREMuBZGA1GCkT8zbdy+CBxPH5zgdRAepe7ETdxf3TY+P53qq3KN8XxfQMSYCp4ZFtIYfRQyfuE2I8gLNWN4hMeFppQ==")
 
 		// Verify
 		require.NoError(t, err)
@@ -29,6 +29,7 @@ func TestHidingReader(t *testing.T) {
 			HideRealIPScore:        6,
 			BadReputationIPScore:   7,
 			RootScore:              8,
+			BotScore:               9,
 		}, *actualRisk)
 	})
 	t.Run("not readable message", func(t *testing.T) {

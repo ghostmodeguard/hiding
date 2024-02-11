@@ -11,4 +11,5 @@ type ComputedHidingRisk struct {
 	HideRealIPScore        int    `json:"i"`
 	BadReputationIPScore   int    `json:"b"`
 	RootScore              int    `json:"ro"`
+	BotScore               int    `json:"bs"`
 }
